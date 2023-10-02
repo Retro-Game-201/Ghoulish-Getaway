@@ -1,10 +1,12 @@
-# LAB - Number
+# Project Name: Ghoulish Getaway (tentative name)
 
-## Project Name
+This site is an in-browser Halloween-themed adventure/survival game. In this game, the player character's vehicle gets a flat tire, requiring them to seek help at the nearby haunted-looking mansion at the side of a deserted highway. To survive, the player must make appropriate choices to avoid classic horror-movie deaths.
 
-I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+### Whiteboard
 
-### Author: Student/Group Name
+[Whiteboard Image](images/whiteboard.jpg)
+
+### Authors: Emma Johnson-Barth, Ava Melchior, Luke McCarthy, & Tom Capps
 
 ### Links and Resources
 
