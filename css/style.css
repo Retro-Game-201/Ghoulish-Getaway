@@ -39,6 +39,30 @@ footer {
   display: flex;
 }
 
+header {
+  padding: 2.5% 0% 2.5% 0%;
+  background-color: rgba(255, 191, 227, 0.2);
+  color:rgba(74, 83, 48, 0.2);
+  width: 80%;
+  margin: 0 auto;
+  /* background-blend-mode: multiply 5%; */
+}
+
+main {
+  color: purple;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  background-color: gold;
+  border: aqua, solid, 3px;
+}
+
+.text {
+  padding: 5%;
+  size: 18px;
+  color: rgb(237, 27, 146);
+}
+
 img {
   height: 200px;
   width: 200px;
