@@ -21,6 +21,7 @@ footer {
   font-size: 10px;
   color: #eabbff;
 
+  
 }
 
 .introduction {
@@ -37,32 +38,6 @@ footer {
 
 .person {
   display: flex;
-}
-
-header {
-  padding: 2.5% 0% 2.5% 0%;
-  background-color: rgba(255, 191, 227, 0.2);
-  color: rgba(74, 83, 48, 0.2);
-  width: 80%;
-  margin: 0 auto;
-  /* background-blend-mode: multiply 5%; */
-}
-
-main {
-  color: purple;
-  margin: 0 auto;
-  width: 600px;
-  height: 200px;
-  background-color:#eabbff;
-  border: 3px solid #4c3454;
-  border-radius: 50px;
-  margin-top: 20px;
-}
-
-.text {
-  padding: 5%;
-  size: 18px;
-  color: #4c3454;
 }
 
 img {
@@ -99,17 +74,17 @@ img {
   border: 2px; */
 }
 
-#start {
-  font-family: 'Press Start 2P';
-  margin: 10px;
-  padding: 10px;
-  background-color: #3d155c;
-  color: rgb(247, 243, 233);
+#start{
+    font-family: 'Press Start 2P';
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #3d155c;
+    color: rgb(247, 243, 233);
 }
 
 .button:hover {
   background-color: rgb(247, 243, 233);
-  color: #3d155c;
+  color:#3d155c;
   transition: 2s;
 }
 
@@ -124,18 +99,28 @@ section {
   border-width: 2px; */
 }
 
+.animate {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-name: animate-fade;
+  animation-timing-function: ease-in;
+}
 
-@keyframes glow {
+animate.glow {
+  animation-name: animate-glow;
+  animation-timing-function: ease;
+}
+
+@keyframes animate-glow {
   0% {
-    box-shadow: 0 0 10px rgba(190, 38, 228, 0.7);
+    opacity: 0;
+    filter: brightness(3), saturate(3);
+    transform: scale(0.5, 0.5);
   }
-
-  50% {
-    box-shadow: 0 0 20px rgba(190, 38, 228, 0.7);
-  }
-
   100% {
-    box-shadow: 0 0 10px rgba(190, 38, 228, 0.7);
+    opacity: 1;
+    filter: brightness(1), saturate(1);
+    transform: scale(1,1);
   }
 }
 
@@ -143,6 +128,10 @@ section {
   animation-delay: 1s;
 }
 
-.animate.glow:hover {
-  animation: glow 0.5s infinite alternate;
+.delay-2 {
+  animation-delay: 1.5s;
+}
+
+.delay-3 {
+  animation-delay: 2s;
 }
