@@ -1,0 +1,44 @@
+body {
+    background-color: #3d155c;
+    background-image: url('/images/SpookyBackground.png');
+    background-size: cover;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    text-align: center;
+    line-height: 2;
+    color:#eabbff;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 10px;
+    color: #eabbff;
+}
+
+.introduction {
+    text-align: left;
+    font-size: 13px;
+    background-color: #4c3454;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    color: #eabbff;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.person {
+    display: flex;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    margin-right: 20px;
+    border: 5px solid #4c3454;
+    border-radius: 50px;
+}
