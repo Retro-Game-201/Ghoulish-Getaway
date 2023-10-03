@@ -7,6 +7,9 @@ body {
   text-align: center;
   line-height: 2;
   color: #eabbff;
+  min-height: 100vh; /* Set the minimum height of the body to the viewport height */
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -14,13 +17,9 @@ h1 {
 }
 
 footer {
-  position: fixed;
-  bottom: 0px;
-  margin-top: 20px;
-  margin-left: 5px;
   font-size: 10px;
   color: #eabbff;
-
+  margin-top:auto;
 }
 
 .introduction {
@@ -39,25 +38,7 @@ footer {
   display: flex;
 }
 
-header {
-  padding: 2.5% 0% 2.5% 0%;
-  background-color: rgba(255, 191, 227, 0.2);
-  color: rgba(74, 83, 48, 0.2);
-  width: 80%;
-  margin: 0 auto;
-  /* background-blend-mode: multiply 5%; */
-}
 
-main {
-  color: purple;
-  margin: 0 auto;
-  width: 600px;
-  height: 200px;
-  background-color:#eabbff;
-  border: 3px solid #4c3454;
-  border-radius: 50px;
-  margin-top: 20px;
-}
 
 .text {
   padding: 5%;
