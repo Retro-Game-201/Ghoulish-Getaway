@@ -13,6 +13,9 @@ This site is an in-browser Halloween-themed adventure/survival game. In this gam
 * [w3 Schools](https://www.w3schools.com/)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/)
 * [CSS Tricks](https://css-tricks.com/)
+* [Web Dev Simplified](https://codepen.io/WebDevSimplified/pen/xoKZbd)
+* [Ryan Zimmerman](https://codepen.io/rzim2082/pen/jMWYJW?editors=0010)
+
 
 ### Lighthouse Accessibility Report Score
 

@@ -14,34 +14,20 @@ let text = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
 let input = document.getElementById('input');
 
+
+//called advanceTo() in the original
 function nextQ(num) {
     // changeImage(num.image);
   changeText(num.text);
   changeButtons(num.buttons);
 }
 
-// addEventListener("click", nextQ()) = 
-
-// function (event) {
-//   if (event.key == 'Enter' || event.keyCode == 13) {
-//     playerName = input.value;
-//     input.parentNode.removeChild(input);
-//     nextQ(scenario.two);
-//   }
-// };
-
-
-
-
-
-// if ('choice' === optionA) {
-//     health--;
-//     nextQ();
-// } else {
-//     nextQ();
-// };
 
 //Note: use "Player Name" for the player name so that the function replaces it correctly
+
+// while (hearts >= 1) {
+// run next function
+// }
 
 function questionOne('click') {
     let text = 'Your car has broken down. Do you run up the stairs or walk';
@@ -59,12 +45,7 @@ function questionThree('click') {
     buttons = ["Spooky", "Fun"]
 }
 
-if (scenario.one.buttons[0]) {
-    hearts--;
-};
 
-while (hearts >= 1) {
 
-}
 
 // nextQ(scenario.one);
