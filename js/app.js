@@ -7,3 +7,6 @@ function startGame() {
   } else {
     alert('Name is required to start');
   }
+}
+
+document.getElementById('start').addEventListener('click', startGame);
