@@ -4,6 +4,7 @@ function startGame() {
   const userName = prompt('Please enter your name:');
   if (userName) {
     localStorage.setItem('User Name: ', userName);
+    window.location.href = 'gameplay.html';
   } else {
     alert('Name is required to start');
   }
