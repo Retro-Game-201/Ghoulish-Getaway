@@ -73,6 +73,14 @@ img {
   border: 2px; */
 }
 
+#start{
+    font-family: 'Press Start 2P';
+    margin: 10px;
+    padding: 10px;
+    background-color: #3d155c;
+    color: rgb(247, 243, 233);
+}
+
 .button:hover {
   background-color: rgb(247, 243, 233);
   color:#3d155c;
