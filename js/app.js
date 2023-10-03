@@ -4,8 +4,8 @@ let health = 3;
 let playerName;
 
 function changeText(name) {
-    text.innerHTML = name.replace("Player Name", playerName);
-};
+  text.innerHTML = name.replace('Player Name', playerName);
+}
 
 input.value = playerName;
 
@@ -19,7 +19,7 @@ let input = document.getElementById('input');
 
 //called advanceTo() in the original
 function nextQ(num) {
-    // changeImage(num.image);
+  // changeImage(num.image);
   changeText(num.text);
   changeButtons(num.buttons);
 }
@@ -33,21 +33,21 @@ while (hearts >= 1) {
 // run next function
 }
 
-function questionOne('click') {
-    let text = 'Your car has broken down. Do you run up the stairs or walk';
-    let buttons = ["Run", "Walk"]
-    // addEventListener('click', )
-    questionTwo();
-};
-
-function questionTwo('click') {
-    text = 'There is a stag head on the wall. Do you look at it?';
-    buttons = ["Yes", "No"];
-    questionThree();
+function questionOne() {
+  let text = 'Your car has broken down. Do you run up the stairs or walk';
+  let buttons = ['Run', 'Walk'];
+  // addEventListener('click', )
+  questionTwo();
 }
 
-function questionThree('click') {
-    text = 'There is a record player. Do you play spooky music or fun music?';
-    buttons = ["Spooky", "Fun"]
-    questionFour();
+function questionTwo() {
+  let text = 'There is a stag head on the wall. Do you look at it?';
+  let buttons = ['Yes', 'No'];
+  questionThree();
+}
+
+function questionThree() {
+  let text = 'There is a record player. Do you play spooky music or fun music?';
+  let buttons = ['Spooky', 'Fun'];
+  questionFour();
 }
