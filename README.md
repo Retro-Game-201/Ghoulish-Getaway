@@ -10,8 +10,9 @@ This site is an in-browser Halloween-themed adventure/survival game. In this gam
 
 ### Links and Resources
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+* [w3 Schools](https://www.w3schools.com/)
+* [MDN Web Docs](https://developer.mozilla.org/en-US/)
+* [CSS Tricks](https://css-tricks.com/)
 
 ### Lighthouse Accessibility Report Score
 
