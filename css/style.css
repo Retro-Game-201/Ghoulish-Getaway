@@ -17,7 +17,7 @@ footer {
   position: fixed;
   bottom: 0px;
   margin-top: 20px;
-  margin-left: auto;
+  margin-left: 5px;
   font-size: 10px;
   color: #eabbff;
 
@@ -51,16 +51,18 @@ header {
 main {
   color: purple;
   margin: 0 auto;
-  width: 80%;
-  height: 80%;
-  background-color: gold;
-  border: aqua, solid, 3px;
+  width: 600px;
+  height: 200px;
+  background-color:#eabbff;
+  border: 3px solid #4c3454;
+  border-radius: 50px;
+  margin-top: 20px;
 }
 
 .text {
   padding: 5%;
   size: 18px;
-  color: rgb(237, 27, 146);
+  color: #4c3454;
 }
 
 img {
@@ -73,7 +75,7 @@ img {
 
 .container {
   text-align: center;
-  margin-left: 41%;
+  margin: 0 auto;
   margin-top: 12%;
   padding: 20px;
   width: 300px;
@@ -122,29 +124,18 @@ section {
   border-width: 2px; */
 }
 
-.animate {
-  animation-duration: 2s;
-  animation-delay: 0.5s;
-  animation-name: animate-fade;
-  animation-timing-function: ease-in;
-}
 
-animate.glow {
-  animation-name: animate-glow;
-  animation-timing-function: ease;
-}
-
-@keyframes animate-glow {
+@keyframes glow {
   0% {
-    opacity: 0;
-    filter: brightness(3), saturate(3);
-    transform: scale(0.5, 0.5);
+    box-shadow: 0 0 10px rgba(190, 38, 228, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(190, 38, 228, 0.7);
   }
 
   100% {
-    opacity: 1;
-    filter: brightness(1), saturate(1);
-    transform: scale(1, 1);
+    box-shadow: 0 0 10px rgba(190, 38, 228, 0.7);
   }
 }
 
@@ -152,10 +143,6 @@ animate.glow {
   animation-delay: 1s;
 }
 
-.delay-2 {
-  animation-delay: 1.5s;
-}
-
-.delay-3 {
-  animation-delay: 2s;
+.animate.glow:hover {
+  animation: glow 0.5s infinite alternate;
 }
