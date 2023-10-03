@@ -91,12 +91,10 @@ img {
 
 .button {
   font-family: 'Press Start 2P';
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
-  background-color: #3d155c;
+
   color: rgb(247, 243, 233);
-  /* border-color: aqua;
-  border: 2px; */
 }
 
 #start {
@@ -114,14 +112,9 @@ img {
 }
 
 section {
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  width: 150px;
   background-color: #3d155c;
-  /* border: aqua;
-  border-width: 2px; */
 }
 
 
@@ -145,4 +138,4 @@ section {
 
 .animate.glow:hover {
   animation: glow 0.5s infinite alternate;
-}
+  }
