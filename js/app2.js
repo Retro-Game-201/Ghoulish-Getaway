@@ -50,11 +50,12 @@ let scenario = {
     buttons: [
       ['Run', function () {
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('three');
       }],
       ['Go slow', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
         advanceTo('three');
       }]
     ]
@@ -63,13 +64,14 @@ let scenario = {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
       ['Inspect', function () {
-        alert('It falls off the wall and impales you. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        alert('It falls off the wall and impales you. Health -1');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('four');
       }],
       ['Leave it alone', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
         advanceTo('four');
       }]
     ]
@@ -80,11 +82,12 @@ let scenario = {
       ['Scary', function () {
         alert('Why would you play scary music. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('five');
       }],
       ['Funny', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
         advanceTo('five');
       }]
     ]
@@ -95,11 +98,12 @@ let scenario = {
       ['Yes', function () {
         alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
         advanceTo('six');
       }],
       ['No', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('six');
       }]
     ]
@@ -108,18 +112,38 @@ let scenario = {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
       ['Shed', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
         advanceTo('seven');
       }],
       ['Basement', function () {
         alert('Don\'t go in the basement! You fell down the stairs. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('seven');
       }]
     ]
   }
 };
+
+let skullImg1 = document.getElementById('skull');
+let skullImg2 = document.getElementById('skull');
+let skullImg3 = document.getElementById('skull');
+
+
+function updateHealth() {
+  if (health === 2) {
+    skullImg3.classList.add('scale-down-center');
+    skullImg3 = document.getElementById('skull').src = '100Purple.png';
+  } else if (health === 1) {
+    skullImg2.classList.add('scale-down-center');
+    skullImg2 = document.getElementById('skull').src = '100Purple.png';
+  } else if (health === 0) {
+    skullImg1.classList.add('scale-down-center');
+    skullImg1 = document.getElementById('skull').src = '100Purple.png';
+    window.location.href = 'index.html';
+  }
+}
 
 advanceTo('two');
 
