@@ -1,36 +1,46 @@
 'use strict';
-const startbutton = document.getElementById('start');
-const userNameInput = document.getElementById('username');
+// const startbutton = document.getElementById('start');
+// const userNameInput = document.getElementById('input');
 
 
-function startGame() {
-  const userName = userNameInput.value;
-  if (userName) {
-    localStorage.setItem('User Name: ', userName);
-    window.location.href = 'gameplay.html';
-  } else {
-    alert('Name is required to start');
-  }
-}
+// function startGame() {
+//   const userName = userNameInput.value;
+//   if (userName) {
+//     localStorage.setItem('User Name: ', userName);
+//     window.location.href = 'gameplay.html';
+//   } else {
+//     alert('Name is required to start');
+//   }
+// }
 
-startbutton.addEventListener('click', startGame);
+// startbutton.addEventListener('click', startGame);
 
 // don't mess with whats up here ^^
 
-let text = document.getElementById('text');
+let textElement = document.getElementById('text');
 
-let buttonBox = document.getElementById('buttonBox');
-
-function changeButtons(buttonList) {
-  buttonBox.innerHTML = '';
-  for (let i = 0; i < buttonList.length; i++){
-    buttonBox.innerHTML += '<button onclick="' + buttonList[i][1] + '">' + buttonList[i][0] + '</button>';
-  }
+function changeText(newText) {
+  textElement.textContent = newText;
 }
 
 function advanceTo(num) {
-  // changeText(scenario.num.text);
+  changeText(scenario[num].text);
   changeButtons(scenario[num].buttons);
+}
+
+
+let buttonBox = document.getElementById('buttonBox');
+
+
+
+function changeButtons(buttonList) {
+  buttonBox.innerHTML = '';
+  for (let i = 0; i < buttonList.length; i++) {
+    const button = document.createElement('button');
+    button.textContent = buttonList[i][0];
+    button.addEventListener('click', buttonList[i][1]);
+    buttonBox.appendChild(button);
+  }
 }
 
 //changeText function
@@ -44,27 +54,42 @@ let scenario = {
     //why are the next scenatios in strings?
 
     //split into ButtonLeft and ButtonRight? If/else statements if clicked on?
-    buttons: [['Run', 'advanceTo(scenario.three)'],['Go slow', 'advanceTo(scenario.three)']]
+    buttons: [
+      ['Run', () => advanceTo('three')],
+      ['Go slow', () => advanceTo('three')]
+    ]
   },
   three: {
     text: 'You see a deer head, do you inspect or leave it alone?',
-    buttons: [['inspect', 'advanceTo(scenario.four'], ['go slow', 'advanceTo(scenatio.four']]
+    buttons: [
+      ['test', () => advanceTo('three')],
+      ['123', () => advanceTo('three')]
+    ]
   },
   four: {
     text: 'There is a record player. Do you play scary music or funny music?',
-    buttons: [['Scary', 'advanceTo(scenario.five)'],['Funny', 'advanceTo(scenario.five)']]
+    buttons: [
+      ['Run', () => advanceTo('three')],
+      ['Go slow', () => advanceTo('three')]
+    ]
   },
   five: {
     text: 'There is a chest that might contain valubles. Do you check it out?',
-    buttons: [['Yes', 'advanceTo(scenario.six'], ['No', 'advanceTo(scenario.six']]
+    buttons: [
+      ['Run', () => advanceTo('three')],
+      ['Go slow', () => advanceTo('three')]
+    ]
   },
   six: {
     text: 'Do you look in the shed or the basement next?',
-    buttons: [['Shed', 'advanceTo(scenario.seven)'], 'Basement', 'advanceTo(scenario.seven)']
+    buttons: [
+      ['Run', () => advanceTo('three')],
+      ['Go slow', () => advanceTo('three')]
+    ]
   }
 
 };
 
-//this is the code that starts the game
-advanceTo(two);
+
+advanceTo('two');
 
