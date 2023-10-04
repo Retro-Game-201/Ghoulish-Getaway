@@ -3,6 +3,9 @@
 let text = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
 
+
+const playerName = document.getElementById('playerNameInput');
+
 const nameButton = document.getElementById('nameButton');
 nameButton.addEventListener('click', changeName);
 
