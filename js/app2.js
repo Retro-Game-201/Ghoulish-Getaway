@@ -3,11 +3,10 @@
 let text = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
 
-//add event listener instead of getElementById?
-let playerName = document.getElementById('player name');
-
-function changeName(words) {
-  text.innerHTML = words.replace('Your name', playerName);
+const nameButton = document.getElementById('nameButton');
+nameButton.addEventListener('click', changeName);
+function changeName(name) {
+  text.innerHTML = name.replace('Your name', playerName);
 }
 
 function changeButtons(buttonList) {
