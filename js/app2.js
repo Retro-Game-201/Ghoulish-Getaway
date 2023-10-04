@@ -1,31 +1,44 @@
 'use strict';
+const startbutton = document.getElementById('start');
+const userNameInput = document.getElementById('username');
 
-let text = document.getElementById('text');
-let buttonBox = document.getElementById('buttonBox');
 
-
-let playerName = document.getElementById('player name');
-
-function changeName(words) {
-  text.innerHTML = words.replace('Your name', playerName);
-}
-
-function changeButtons(buttonList) {
-  buttonBox.innerHTML = '';
-  for (let i = 0; i < buttonList.length; i++) {
-    buttonBox.innerHTML += 'button onClick=' +buttonList[i][1]+'>' + buttonList[i][0] + '</button>';
+function startGame() {
+  const userName = userNameInput.value;
+  if (userName) {
+    localStorage.setItem('User Name: ', userName);
+    window.location.href = 'gameplay.html';
+  } else {
+    alert('Name is required to start');
   }
 }
 
-function advanceTo(num){
-  changeName(scenario.num.text);
-  changeButtons(scenario.num.buttons);
+startbutton.addEventListener('click', startGame);
+
+// don't mess with whats up here ^^
+
+let text = document.getElementById('text');
+
+let buttonBox = document.getElementById('buttonBox');
+
+function changeButtons(buttonList) {
+  buttonBox.innerHTML = '';
+  for (let i = 0; i < buttonList.length; i++){
+    buttonBox.innerHTML += '<button onclick="' + buttonList[i][1] + '">' + buttonList[i][0] + '</button>';
+  }
 }
 
+function advanceTo(num) {
+  // changeText(scenario.num.text);
+  changeButtons(scenario[num].buttons);
+}
+
+//changeText function
+
 let scenario = {
-  one: {
-    text: 'What is your name?',
-  },
+  // one: {
+  //   text: 'What is your name?',
+  // },
   two: {
     text: 'Do you run into the house or enter slowly?',
     //why are the next scenatios in strings?
