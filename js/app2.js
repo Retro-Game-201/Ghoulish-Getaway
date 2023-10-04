@@ -6,13 +6,6 @@ let buttonBox = document.getElementById('buttonBox');
 
 let playerName = document.getElementById('player name');
 
-// function hidePlayerName() {
-//   playerName.parentNode.removeChild('input');
-//   advanceTo(scenario.two);
-// }
-
-// input.addEventListener('click', hidePlayerName());
-
 function changeName(words) {
   text.innerHTML = words.replace('Your name', playerName);
 }
@@ -36,6 +29,8 @@ let scenario = {
   two: {
     text: 'Do you run into the house or enter slowly?',
     //why are the next scenatios in strings?
+
+    //split into ButtonLeft and ButtonRight? If/else statements if clicked on?
     buttons: [['Run', 'advanceTo(scenario.three)'],['Go slow', 'advanceTo(scenario.three)']]
   },
   three: {
