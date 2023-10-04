@@ -31,7 +31,7 @@ let scenario = {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
       ['Run', function () {
-        alert('You ran in your pumpkin costume and fell on the stairs! Health -1')
+        alert('You ran in your pumpkin costume and fell on the stairs! Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
@@ -116,18 +116,15 @@ let skullImg3 = document.getElementById('skull3');
 
 function updateHealth() {
   if (health === 2) {
-    skullImg3.classList.add('scale-down-center');
+    skullImg3.classList.add('fade-out');
     skullImg3 = document.getElementById('skull3').src = 'images/100Purple.png';
-    // skullImg3.style.visibility = 'hidden';
   } else if (health === 1) {
-    skullImg2.classList.add('scale-down-center');
+    skullImg2.classList.add('fade-out');
     skullImg2 = document.getElementById('skull2').src = 'images/100Purple.png';
-    // skullImg2.style.visibility = 'hidden';
-
   } else if (health === 0) {
-    skullImg1.classList.add('scale-down-center');
+    alert('You died :(');
+    skullImg1.classList.add('fade-out');
     skullImg1 = document.getElementById('skull1').src = 'images/100Purple.png';
-    // skullImg1.style.visibility = 'hidden';
     window.location.href = 'index.html';
   }
 }
@@ -137,12 +134,5 @@ advanceTo('one');
 function advanceTo(num) {
   changeText(scenario[num].text);
   changeButtons(scenario[num].buttons);
-  // if (health < 3) {
-  //   const skullIdToHide = 'skull' + (3 - health);
-  //   const skullToHide = document.getElementById(skullIdToHide);
-  //   if (skullToHide) {
-  //     skullToHide.style.visibility = 'hidden';
-  //   }
-  // }
 }
 
