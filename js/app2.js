@@ -5,6 +5,7 @@ let buttonBox = document.getElementById('buttonBox');
 
 const nameButton = document.getElementById('nameButton');
 nameButton.addEventListener('click', changeName);
+
 function changeName(name) {
   text.innerHTML = name.replace('Your name', playerName);
 }
