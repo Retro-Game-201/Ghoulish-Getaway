@@ -46,10 +46,12 @@ let scenario = {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
       ['Run', function () {
-        advanceTo('three');
         health--;
+        console.log('Your health is ' + health + 'out of 3');
+        advanceTo('three');
       }],
       ['Go slow', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('three');
       }]
     ]
@@ -60,9 +62,11 @@ let scenario = {
       ['Inspect', function () {
         alert('It falls off the wall and impales you. Health -1');
         health--;
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('four');
       }],
       ['Leave it alone', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('four');
       }]
     ]
@@ -73,9 +77,11 @@ let scenario = {
       ['Scary', function () {
         alert('Why would you play scary music. Health -1');
         health--;
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('five');
       }],
       ['Funny', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('five');
       }]
     ]
@@ -86,9 +92,11 @@ let scenario = {
       ['Yes', function () {
         alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('six');
       }],
       ['No', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('six');
       }]
     ]
@@ -97,11 +105,13 @@ let scenario = {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
       ['Shed', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('seven');
       }],
       ['Basement', function () {
         alert('Don\'t go in the basement! You fell down the stairs. Health -1');
         health--;
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('seven');
       }]
     ]
