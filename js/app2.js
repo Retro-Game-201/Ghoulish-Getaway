@@ -43,36 +43,56 @@ let scenario = {
   two: {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
-      ['Run', () => advanceTo('three')],
-      ['Go slow', () => advanceTo('three')]
+      ['Run', function() {
+        advanceTo('three');
+      }],
+      ['Go slow', function() {
+        advanceTo('three');
+      }]
     ]
   },
   three: {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
-      ['Inspect', () => advanceTo('four')],
-      ['Leave it alone', () => advanceTo('four')]
+      ['Inspect', function(){
+        advanceTo('four');
+      }],
+      ['Leave it alone', function() {
+        advanceTo('four');
+      }]
     ]
   },
   four: {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
-      ['Scary', () => advanceTo('five')],
-      ['Funny', () => advanceTo('five')]
+      ['Scary', function(){
+        advanceTo('five');
+      }],
+      ['Funny', function() {
+        advanceTo('five');
+      }]
     ]
   },
   five: {
     text: 'There is a chest that might contain valuables. Do you check it out?',
     buttons: [
-      ['Yes', () => advanceTo('six')],
-      ['No', () => advanceTo('six')]
+      ['Yes', function() {
+        advanceTo('six');
+      }],
+      ['No', function(){
+        advanceTo('six');
+      }]
     ]
   },
   six: {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
-      ['Shed', () => advanceTo('seven')],
-      ['Basement', () => advanceTo('seven')]
+      ['Shed', function() {
+        advanceTo('seven');
+      }],
+      ['Basement', function() {
+        advanceTo('seven');
+      }]
     ]
   }
 };
