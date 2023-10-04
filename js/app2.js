@@ -31,6 +31,7 @@ let scenario = {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
       ['Run', function () {
+        alert('You ran in your pumpkin costume and fell on the stairs! Health -1')
         health--;
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
@@ -115,17 +116,18 @@ let skullImg3 = document.getElementById('skull3');
 
 function updateHealth() {
   if (health === 2) {
-    skullImg3.style.visibility = 'hidden';
-    // skullImg3.classList.add('scale-down-center');
-    // skullImg3 = document.getElementById('skull').src = '100Purple.png';
+    skullImg3.classList.add('scale-down-center');
+    skullImg3 = document.getElementById('skull3').src = 'images/100Purple.png';
+    // skullImg3.style.visibility = 'hidden';
   } else if (health === 1) {
-    skullImg2.style.visibility = 'hidden';
-    // skullImg2.classList.add('scale-down-center');
-    // skullImg2 = document.getElementById('skull').src = '100Purple.png';
+    skullImg2.classList.add('scale-down-center');
+    skullImg2 = document.getElementById('skull2').src = 'images/100Purple.png';
+    // skullImg2.style.visibility = 'hidden';
+
   } else if (health === 0) {
-    skullImg1.style.visibility = 'hidden';
-    // skullImg1.classList.add('scale-down-center');
-    // skullImg1 = document.getElementById('skull').src = '100Purple.png';
+    skullImg1.classList.add('scale-down-center');
+    skullImg1 = document.getElementById('skull1').src = 'images/100Purple.png';
+    // skullImg1.style.visibility = 'hidden';
     window.location.href = 'index.html';
   }
 }
