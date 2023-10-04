@@ -29,6 +29,7 @@ function changeButtons(buttonList) {
   for (let i = 0; i < buttonList.length; i++) {
     const button = document.createElement('button');
     button.textContent = buttonList[i][0];
+    button.className = 'custom-button';
     button.addEventListener('click', buttonList[i][1]);
     buttonBox.appendChild(button);
   }

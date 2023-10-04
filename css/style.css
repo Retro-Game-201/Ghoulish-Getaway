@@ -89,7 +89,7 @@ img {
 .button:hover {
   background-color: rgb(247, 243, 233);
   color: #3d155c;
-  transition: 2s;
+  transition: 0.3s;
 }
 
 section {
@@ -126,3 +126,17 @@ section {
     background-color:#3d155c;
     color: white;
   }
+
+  .custom-button {
+    background-color: #32124b;
+    color: #c9a2db;
+    padding: 10px 20px;
+    border: 2px solid #c9a2db;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a box shadow */
+  }
+  
