@@ -17,6 +17,8 @@
 
 // don't mess with whats up here ^^
 
+let health = 3;
+
 let textElement = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
 
@@ -43,10 +45,10 @@ let scenario = {
   two: {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
-      ['Run', function() {
+      ['Run', function () {
         advanceTo('three');
       }],
-      ['Go slow', function() {
+      ['Go slow', function () {
         advanceTo('three');
       }]
     ]
@@ -54,10 +56,11 @@ let scenario = {
   three: {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
-      ['Inspect', function(){
+      ['Inspect', function () {
+        health--;
         advanceTo('four');
       }],
-      ['Leave it alone', function() {
+      ['Leave it alone', function () {
         advanceTo('four');
       }]
     ]
@@ -65,10 +68,10 @@ let scenario = {
   four: {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
-      ['Scary', function(){
+      ['Scary', function () {
         advanceTo('five');
       }],
-      ['Funny', function() {
+      ['Funny', function () {
         advanceTo('five');
       }]
     ]
@@ -76,10 +79,10 @@ let scenario = {
   five: {
     text: 'There is a chest that might contain valuables. Do you check it out?',
     buttons: [
-      ['Yes', function() {
+      ['Yes', function () {
         advanceTo('six');
       }],
-      ['No', function(){
+      ['No', function () {
         advanceTo('six');
       }]
     ]
@@ -87,10 +90,10 @@ let scenario = {
   six: {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
-      ['Shed', function() {
+      ['Shed', function () {
         advanceTo('seven');
       }],
-      ['Basement', function() {
+      ['Basement', function () {
         advanceTo('seven');
       }]
     ]
