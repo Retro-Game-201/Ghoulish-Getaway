@@ -80,12 +80,12 @@ let scenario = {
       ['Yes', function () {
         alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
+        updateHealth();
         console.log('Your health is ' + health + ' out of 3');
         advanceTo('five');
       }],
       ['No', function () {
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('five');
       }]
     ]
@@ -108,9 +108,9 @@ let scenario = {
   }
 };
 
-let skullImg1 = document.getElementById('skull');
-let skullImg2 = document.getElementById('skull');
-let skullImg3 = document.getElementById('skull');
+let skullImg1 = document.getElementById('skull1');
+let skullImg2 = document.getElementById('skull2');
+let skullImg3 = document.getElementById('skull3');
 
 
 function updateHealth() {
