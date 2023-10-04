@@ -2,15 +2,14 @@
 
 let text = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
-
-
 const playerName = document.getElementById('playerNameInput');
-
 const nameButton = document.getElementById('nameButton');
+
+
 nameButton.addEventListener('click', changeName);
 
 function changeName(name) {
-  text.innerHTML = name.replace('Your name', playerName);
+  text.innerHTML = name.replace('playerName', playerName);
 }
 
 function changeButtons(buttonList) {
