@@ -46,8 +46,8 @@ let scenario = {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
       ['Run', function () {
-        health--;
         advanceTo('three');
+        health--;
       }],
       ['Go slow', function () {
         advanceTo('three');
@@ -58,6 +58,7 @@ let scenario = {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
       ['Inspect', function () {
+        alert('It falls off the wall and impales you. Health -1');
         health--;
         advanceTo('four');
       }],
@@ -70,6 +71,7 @@ let scenario = {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
       ['Scary', function () {
+        alert('Why would you play scary music. Health -1');
         health--;
         advanceTo('five');
       }],
@@ -82,6 +84,7 @@ let scenario = {
     text: 'There is a chest that might contain valuables. Do you check it out?',
     buttons: [
       ['Yes', function () {
+        alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
         advanceTo('six');
       }],
@@ -97,8 +100,8 @@ let scenario = {
         advanceTo('seven');
       }],
       ['Basement', function () {
+        alert('Don\'t go in the basement! You fell down the stairs. Health -1');
         health--;
-        alert()
         advanceTo('seven');
       }]
     ]
