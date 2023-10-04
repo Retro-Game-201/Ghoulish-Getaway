@@ -1,23 +1,4 @@
 'use strict';
-// const startbutton = document.getElementById('start');
-// const userNameInput = document.getElementById('input');
-
-
-// function startGame() {
-//   const userName = userNameInput.value;
-//   if (userName) {
-//     localStorage.setItem('User Name: ', userName);
-//     window.location.href = 'gameplay.html';
-//   } else {
-//     alert('Name is required to start');
-//   }
-// }
-
-// startbutton.addEventListener('click', startGame);
-
-// don't mess with whats up here ^^
-
-
 
 let health = 3;
 
@@ -39,28 +20,29 @@ function changeButtons(buttonList) {
   }
 }
 
-function advanceTo(num) {
-  changeText(scenario[num].text);
-  changeButtons(scenario[num].buttons);
-}
+// duplicate:
+// function advanceTo(num) {
+//   changeText(scenario[num].text);
+//   changeButtons(scenario[num].buttons);
+// }
 
 let scenario = {
-  two: {
+  one: {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
       ['Run', function () {
         health--;
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
-        advanceTo('three');
+        advanceTo('two');
       }],
       ['Go slow', function () {
         console.log('Your health is ' + health + ' out of 3');
-        advanceTo('three');
+        advanceTo('two');
       }]
     ]
   },
-  three: {
+  two: {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
       ['Inspect', function () {
@@ -68,15 +50,15 @@ let scenario = {
         alert('It falls off the wall and impales you. Health -1');
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
-        advanceTo('four');
+        advanceTo('three');
       }],
       ['Leave it alone', function () {
         console.log('Your health is ' + health + ' out of 3');
-        advanceTo('four');
+        advanceTo('three');
       }]
     ]
   },
-  four: {
+  three: {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
       ['Scary', function () {
@@ -84,43 +66,43 @@ let scenario = {
         health--;
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
-        advanceTo('five');
+        advanceTo('four');
       }],
       ['Funny', function () {
         console.log('Your health is ' + health + ' out of 3');
-        advanceTo('five');
+        advanceTo('four');
       }]
     ]
   },
-  five: {
+  four: {
     text: 'There is a chest that might contain valuables. Do you check it out?',
     buttons: [
       ['Yes', function () {
         alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
-        advanceTo('six');
+        advanceTo('five');
       }],
       ['No', function () {
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
-        advanceTo('six');
+        advanceTo('five');
       }]
     ]
   },
-  six: {
+  five: {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
       ['Shed', function () {
         console.log('Your health is ' + health + ' out of 3');
-        advanceTo('seven');
+        advanceTo('six');
       }],
       ['Basement', function () {
         alert('Don\'t go in the basement! You fell down the stairs. Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
-        advanceTo('seven');
+        advanceTo('six');
       }]
     ]
   }
@@ -133,29 +115,32 @@ let skullImg3 = document.getElementById('skull');
 
 function updateHealth() {
   if (health === 2) {
-    skullImg3.classList.add('scale-down-center');
-    skullImg3 = document.getElementById('skull').src = '100Purple.png';
+    skullImg3.style.visibility = 'hidden';
+    // skullImg3.classList.add('scale-down-center');
+    // skullImg3 = document.getElementById('skull').src = '100Purple.png';
   } else if (health === 1) {
-    skullImg2.classList.add('scale-down-center');
-    skullImg2 = document.getElementById('skull').src = '100Purple.png';
+    skullImg2.style.visibility = 'hidden';
+    // skullImg2.classList.add('scale-down-center');
+    // skullImg2 = document.getElementById('skull').src = '100Purple.png';
   } else if (health === 0) {
-    skullImg1.classList.add('scale-down-center');
-    skullImg1 = document.getElementById('skull').src = '100Purple.png';
+    skullImg1.style.visibility = 'hidden';
+    // skullImg1.classList.add('scale-down-center');
+    // skullImg1 = document.getElementById('skull').src = '100Purple.png';
     window.location.href = 'index.html';
   }
 }
 
-advanceTo('two');
+advanceTo('one');
 
 function advanceTo(num) {
   changeText(scenario[num].text);
   changeButtons(scenario[num].buttons);
-  if (health < 3) {
-    const skullIdToHide = 'skull' + (3 - health);
-    const skullToHide = document.getElementById(skullIdToHide);
-    if (skullToHide) {
-      skullToHide.style.visibility = 'hidden';
-    }
-  }
+  // if (health < 3) {
+  //   const skullIdToHide = 'skull' + (3 - health);
+  //   const skullToHide = document.getElementById(skullIdToHide);
+  //   if (skullToHide) {
+  //     skullToHide.style.visibility = 'hidden';
+  //   }
+  // }
 }
 
