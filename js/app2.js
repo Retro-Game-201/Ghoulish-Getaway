@@ -3,7 +3,7 @@
 let text = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
 
-
+//add event listener instead of getElementById?
 let playerName = document.getElementById('player name');
 
 function changeName(words) {
