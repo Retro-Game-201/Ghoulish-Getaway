@@ -46,6 +46,7 @@ let scenario = {
     text: 'Do you run into the house or enter slowly?',
     buttons: [
       ['Run', function () {
+        health--;
         advanceTo('three');
       }],
       ['Go slow', function () {
@@ -69,6 +70,7 @@ let scenario = {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
       ['Scary', function () {
+        health--;
         advanceTo('five');
       }],
       ['Funny', function () {
@@ -80,6 +82,7 @@ let scenario = {
     text: 'There is a chest that might contain valuables. Do you check it out?',
     buttons: [
       ['Yes', function () {
+        health--;
         advanceTo('six');
       }],
       ['No', function () {
@@ -94,6 +97,8 @@ let scenario = {
         advanceTo('seven');
       }],
       ['Basement', function () {
+        health--;
+        alert()
         advanceTo('seven');
       }]
     ]
