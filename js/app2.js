@@ -62,8 +62,8 @@ let scenario = {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
       ['Inspect', function () {
-        alert('It falls off the wall and impales you. Health -1');
         health--;
+        alert('It falls off the wall and impales you. Health -1');
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
         advanceTo('four');
@@ -128,16 +128,17 @@ let skullImg1 = document.getElementById('skull');
 let skullImg2 = document.getElementById('skull');
 let skullImg3 = document.getElementById('skull');
 
+
 function updateHealth() {
   if (health === 2) {
-    skullImg3.classList.add('keyframesNameHere');
-    skullImg3 = document.getElementById('purp');
+    skullImg3.classList.add('scale-down-center');
+    skullImg3 = document.getElementById('skull').src = '100Purple.png';
   } else if (health === 1) {
-    skullImg2.classList.add('keyframesNameHere');
-    skullImg2 = document.getElementById('purp');
+    skullImg2.classList.add('scale-down-center');
+    skullImg2 = document.getElementById('skull').src = '100Purple.png';
   } else if (health === 0) {
-    skullImg1.classList.add('keyFramesNameHere');
-    skullImg1 = document.getElementById('purp');
+    skullImg1.classList.add('scale-down-center');
+    skullImg1 = document.getElementById('skull').src = '100Purple.png';
     window.location.href = 'index.html';
   }
 }
