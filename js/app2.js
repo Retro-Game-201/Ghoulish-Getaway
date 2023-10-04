@@ -18,20 +18,11 @@
 // don't mess with whats up here ^^
 
 let textElement = document.getElementById('text');
+let buttonBox = document.getElementById('buttonBox');
 
 function changeText(newText) {
   textElement.textContent = newText;
 }
-
-function advanceTo(num) {
-  changeText(scenario[num].text);
-  changeButtons(scenario[num].buttons);
-}
-
-
-let buttonBox = document.getElementById('buttonBox');
-
-
 
 function changeButtons(buttonList) {
   buttonBox.innerHTML = '';
@@ -43,17 +34,14 @@ function changeButtons(buttonList) {
   }
 }
 
-//changeText function
+function advanceTo(num) {
+  changeText(scenario[num].text);
+  changeButtons(scenario[num].buttons);
+}
 
 let scenario = {
-  // one: {
-  //   text: 'What is your name?',
-  // },
   two: {
     text: 'Do you run into the house or enter slowly?',
-    //why are the next scenatios in strings?
-
-    //split into ButtonLeft and ButtonRight? If/else statements if clicked on?
     buttons: [
       ['Run', () => advanceTo('three')],
       ['Go slow', () => advanceTo('three')]
@@ -62,34 +50,31 @@ let scenario = {
   three: {
     text: 'You see a deer head, do you inspect or leave it alone?',
     buttons: [
-      ['test', () => advanceTo('three')],
-      ['123', () => advanceTo('three')]
+      ['Inspect', () => advanceTo('four')],
+      ['Leave it alone', () => advanceTo('four')]
     ]
   },
   four: {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
-      ['Run', () => advanceTo('three')],
-      ['Go slow', () => advanceTo('three')]
+      ['Scary', () => advanceTo('five')],
+      ['Funny', () => advanceTo('five')]
     ]
   },
   five: {
-    text: 'There is a chest that might contain valubles. Do you check it out?',
+    text: 'There is a chest that might contain valuables. Do you check it out?',
     buttons: [
-      ['Run', () => advanceTo('three')],
-      ['Go slow', () => advanceTo('three')]
+      ['Yes', () => advanceTo('six')],
+      ['No', () => advanceTo('six')]
     ]
   },
   six: {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
-      ['Run', () => advanceTo('three')],
-      ['Go slow', () => advanceTo('three')]
+      ['Shed', () => advanceTo('seven')],
+      ['Basement', () => advanceTo('seven')]
     ]
   }
-
 };
 
-
 advanceTo('two');
-
