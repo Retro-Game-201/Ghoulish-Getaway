@@ -17,6 +17,8 @@
 
 // don't mess with whats up here ^^
 
+
+
 let health = 3;
 
 let textElement = document.getElementById('text');
@@ -120,3 +122,16 @@ let scenario = {
 };
 
 advanceTo('two');
+
+function advanceTo(num) {
+  changeText(scenario[num].text);
+  changeButtons(scenario[num].buttons);
+  if (health < 3) {
+    const skullIdToHide = 'skull' + (3 - health);
+    const skullToHide = document.getElementById(skullIdToHide);
+    if (skullToHide) {
+      skullToHide.style.visibility = 'hidden';
+    }
+  }
+}
+
