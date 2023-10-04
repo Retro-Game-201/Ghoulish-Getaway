@@ -48,11 +48,13 @@ let scenario = {
     buttons: [
       ['Run', function () {
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('three');
       }],
       ['Go slow', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('three');
       }]
     ]
@@ -63,11 +65,13 @@ let scenario = {
       ['Inspect', function () {
         alert('It falls off the wall and impales you. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('four');
       }],
       ['Leave it alone', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('four');
       }]
     ]
@@ -78,11 +82,13 @@ let scenario = {
       ['Scary', function () {
         alert('Why would you play scary music. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('five');
       }],
       ['Funny', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('five');
       }]
     ]
@@ -93,11 +99,13 @@ let scenario = {
       ['Yes', function () {
         alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('six');
       }],
       ['No', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('six');
       }]
     ]
@@ -106,17 +114,37 @@ let scenario = {
     text: 'Do you look in the shed or the basement next?',
     buttons: [
       ['Shed', function () {
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('seven');
       }],
       ['Basement', function () {
         alert('Don\'t go in the basement! You fell down the stairs. Health -1');
         health--;
-        console.log('Your health is ' + health + 'out of 3');
+        console.log('Your health is ' + health + ' out of 3');
+        updateHealth();
         advanceTo('seven');
       }]
     ]
   }
 };
+
+let skullImg1 = document.getElementById('skull');
+let skullImg2 = document.getElementById('skull');
+let skullImg3 = document.getElementById('skull');
+
+function updateHealth() {
+  if (health === 2) {
+    skullImg3.classList.add('keyframesNameHere');
+    skullImg3 = document.getElementById('purp');
+  } else if (health === 1) {
+    skullImg2.classList.add('keyframesNameHere');
+    skullImg2 = document.getElementById('purp');
+  } else if (health === 0) {
+    skullImg1.classList.add('keyFramesNameHere');
+    skullImg1 = document.getElementById('purp');
+    gameOver();
+  }
+}
 
 advanceTo('two');
