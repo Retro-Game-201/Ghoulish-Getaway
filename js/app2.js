@@ -54,7 +54,6 @@ let scenario = {
       }],
       ['Go slow', function () {
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('three');
       }]
     ]
@@ -71,7 +70,6 @@ let scenario = {
       }],
       ['Leave it alone', function () {
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('four');
       }]
     ]
@@ -88,7 +86,6 @@ let scenario = {
       }],
       ['Funny', function () {
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('five');
       }]
     ]
@@ -100,7 +97,6 @@ let scenario = {
         alert('That wasn\'t a chest, it was a mimic! That\'s what you get for stealing. Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('six');
       }],
       ['No', function () {
@@ -115,7 +111,6 @@ let scenario = {
     buttons: [
       ['Shed', function () {
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('seven');
       }],
       ['Basement', function () {
@@ -143,7 +138,7 @@ function updateHealth() {
   } else if (health === 0) {
     skullImg1.classList.add('keyFramesNameHere');
     skullImg1 = document.getElementById('purp');
-    gameOver();
+    window.location.href = 'index.html';
   }
 }
 
