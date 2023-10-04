@@ -2,18 +2,18 @@
 
 let text = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
-let input = document.getElementById('player name');
 
-let playerName = input.value;
 
-input.addEventListener('click', hidePlayerName());
+let playerName = document.getElementById('player name');
 
-function hidePlayerName() {
-  input.parentNode.removeChild('input');
-  advanceTo(scenario.two);
-}
+// function hidePlayerName() {
+//   playerName.parentNode.removeChild('input');
+//   advanceTo(scenario.two);
+// }
 
-function changeText(words) {
+// input.addEventListener('click', hidePlayerName());
+
+function changeName(words) {
   text.innerHTML = words.replace('Your name', playerName);
 }
 
@@ -25,7 +25,7 @@ function changeButtons(buttonList) {
 }
 
 function advanceTo(num){
-  changeText(scenario.num.text);
+  changeName(scenario.num.text);
   changeButtons(scenario.num.buttons);
 }
 
@@ -58,5 +58,5 @@ let scenario = {
 };
 
 //this is the code that starts the game
-advanceTo(scenario.one);
+advanceTo(two);
 
