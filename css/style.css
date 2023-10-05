@@ -16,6 +16,11 @@ body {
 header {
   margin-top: 20px;
   background-color: #32124b;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #eabbff;
 }
 
 h1 {
@@ -74,7 +79,7 @@ img {
 .container {
   text-align: center;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 20px;
   width: 300px;
   border: 2px solid #ccc;
