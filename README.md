@@ -18,7 +18,9 @@ This site is an in-browser Halloween-themed adventure/survival game. In this gam
 
 ### Lighthouse Accessibility Report Score
 
-* Provide a screenshot of your score after running a Lighthouse Accessibility report.
+* [Homepage Lighthouse Score: 100](images/indexhml.png)
+* [About Us Lighthouse Score: 100](images/aboutUS.png)
+* [Gameplay Lighthouse Score: 100](images/gameplay.png)
 
 ### Reflections and Comments
 
