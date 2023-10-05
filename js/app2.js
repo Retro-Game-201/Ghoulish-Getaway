@@ -51,8 +51,8 @@ let scenario = {
       ['Run to entrance', function () {
         health--;
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('three');
+        updateHealth();
       }],
       ['Enter house slowly', function () {
         console.log('Your health is ' + health + 'out of 3');
@@ -67,8 +67,8 @@ let scenario = {
         health--;
         alert('It falls off the wall and impales you. Health -1');
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('four');
+        updateHealth();
       }],
       ['Ignore and go to next room', function () {
         console.log('Your health is ' + health + 'out of 3');
@@ -83,9 +83,9 @@ let scenario = {
         alert('Why would you play scary music. Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('five');
         checkGameOver();
+        updateHealth();
       }],
       ['Funny', function () {
         console.log('Your health is ' + health + ' out of 3');
@@ -105,8 +105,8 @@ let scenario = {
       }],
       ['No', function () {
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('six');
+        updateHealth();
       }]
     ]
   },
@@ -121,9 +121,9 @@ let scenario = {
         alert('Don\'t go in the basement! You fell down the stairs. Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
-        updateHealth();
         advanceTo('seven');
         checkGameOver();
+        updateHealth();
       }]
     ]
   }
