@@ -80,6 +80,7 @@ let scenario = {
     buttons: [
       ['Scary', function () {
         defaultSong.pause();
+        scarySong.muted = false;
         scarySong.play();
         alert('Why would you play scary music. Health -1');
         health--;
@@ -91,6 +92,7 @@ let scenario = {
       ['Funny', function () {
         alert('Good choice. Nothing bad happens when the music is silly.');
         defaultSong.pause();
+        funnySong.muted = false;
         funnySong.play();
         console.log('Your health is ' + health + ' out of 3');
         advanceTo('five');
