@@ -136,14 +136,15 @@ let skullImg3 = document.getElementById('skull');
 
 function updateHealth() {
   if (health === 2) {
-    skullImg3.classList.add('scale-down-center');
-    skullImg3 = document.getElementById('skull').src = '100Purple.png';
+    skullImg3.classList.add('fade-out');
+    skullImg3 = document.getElementById('skull3').src='images/100Purple.png';
   } else if (health === 1) {
-    skullImg2.classList.add('scale-down-center');
-    skullImg2 = document.getElementById('skull').src = '100Purple.png';
-  } else if (health === 0) {
-    skullImg1.classList.add('scale-down-center');
-    skullImg1 = document.getElementById('skull').src = '100Purple.png';
+    skullImg2.classList.add('fade-out');
+    skullImg2 = document.getElementById('skull2').src = 'images/100Purple.png';
+  }
+  else if (health === 0) {
+    skullImg1.classList.add('fade-out');
+    skullImg1 = document.getElementById('skull1').src = 'images/100Purple.png';
     window.location.href = 'index.html';
   }
 }
