@@ -1,6 +1,6 @@
 body {
   background-color: #3d155c;
-  background-image: url('/images/SpookyBackground.png');
+  background-image: url('..//images/SpookyBackground.png');
   background-size: cover;
   font-family: 'Press Start 2P';
   font-size: 15px;
