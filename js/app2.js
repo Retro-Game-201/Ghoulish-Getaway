@@ -33,6 +33,7 @@ function checkGameOver() {
       advanceTo('two');
       window.location.href = 'index.html';
     });
+    buttonBox.innerHTML = '';
     buttonBox.appendChild(restartButton);
   }
 }
@@ -145,7 +146,6 @@ function updateHealth() {
     skullImg1.classList.add('fade-out');
     skullImg1.addEventListener('animationend', function () {
       skullImg1.classList.remove('fade-out');
-      window.location.href = 'index.html';
       document.getElementById('skull1').src = 'images/100Purple.png';
     });
   }
