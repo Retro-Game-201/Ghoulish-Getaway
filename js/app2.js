@@ -1,21 +1,4 @@
 'use strict';
-// const startbutton = document.getElementById('start');
-// const userNameInput = document.getElementById('input');
-
-
-// function startGame() {
-//   const userName = userNameInput.value;
-//   if (userName) {
-//     localStorage.setItem('User Name: ', userName);
-//     window.location.href = 'gameplay.html';
-//   } else {
-//     alert('Name is required to start');
-//   }
-// }
-
-// startbutton.addEventListener('click', startGame);
-
-// don't mess with whats up here ^^
 
 
 
@@ -39,6 +22,23 @@ function changeButtons(buttonList) {
   }
 }
 
+function checkGameOver() {
+  if (health <= 0) {
+    changeText('Game Over! You lost all your lives.');
+    let restartButton = document.createElement('button');
+    restartButton.textContent = 'Restart';
+    restartButton.className = 'restart';
+    restartButton.addEventListener('click', function() {
+      health = 3;
+      advanceTo('two');
+      window.location.href = 'index.html';
+    });
+    buttonBox.appendChild(restartButton);
+  }
+}
+
+
+
 function advanceTo(num) {
   changeText(scenario[num].text);
   changeButtons(scenario[num].buttons);
@@ -46,22 +46,22 @@ function advanceTo(num) {
 
 let scenario = {
   two: {
-    text: 'Do you run into the house or enter slowly?',
+    text: 'You\'re driving down a dark, remote road when your front passenger tire blows! You struggle to regain control as you skid off the road.You gather yourself and see a foreboding mansion ahead of you.You need to fix your tire, but you know you do not have the tools.What do you do',
     buttons: [
-      ['Run', function () {
+      ['Run to entrance', function () {
         health--;
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
         advanceTo('three');
       }],
-      ['Go slow', function () {
-        console.log('Your health is ' + health + ' out of 3');
+      ['Enter house slowly', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('three');
       }]
     ]
   },
   three: {
-    text: 'You see a deer head, do you inspect or leave it alone?',
+    text: 'You enter a dusty sitting room, filled with old volumes and leather seats. You notice an old mounted stag head on the wall. Did the eyes just move?',
     buttons: [
       ['Inspect', function () {
         health--;
@@ -70,8 +70,8 @@ let scenario = {
         updateHealth();
         advanceTo('four');
       }],
-      ['Leave it alone', function () {
-        console.log('Your health is ' + health + ' out of 3');
+      ['Ignore and go to next room', function () {
+        console.log('Your health is ' + health + 'out of 3');
         advanceTo('four');
       }]
     ]
@@ -85,6 +85,7 @@ let scenario = {
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
         advanceTo('five');
+        checkGameOver();
       }],
       ['Funny', function () {
         console.log('Your health is ' + health + ' out of 3');
@@ -100,6 +101,7 @@ let scenario = {
         health--;
         console.log('Your health is ' + health + ' out of 3');
         advanceTo('six');
+        checkGameOver();
       }],
       ['No', function () {
         console.log('Your health is ' + health + ' out of 3');
@@ -121,6 +123,7 @@ let scenario = {
         console.log('Your health is ' + health + ' out of 3');
         updateHealth();
         advanceTo('seven');
+        checkGameOver();
       }]
     ]
   }
