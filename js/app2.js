@@ -37,13 +37,6 @@ function checkGameOver() {
   }
 }
 
-
-
-// function advanceTo(num) {
-//   changeText(scenario[num].text);
-//   changeButtons(scenario[num].buttons);
-// }
-
 let scenario = {
   two: {
     text: 'You\'re driving down a dark, remote road when your front passenger tire blows! You struggle to regain control as you skid off the road.You gather yourself and see a foreboding mansion ahead of you.You need to fix your tire, but you know you do not have the tools.What do you do',
@@ -164,12 +157,5 @@ advanceTo('two');
 function advanceTo(num) {
   changeText(scenario[num].text);
   changeButtons(scenario[num].buttons);
-  // if (health < 3) {
-  //   const skullIdToHide = 'skull' + (3 - health);
-  //   const skullToHide = document.getElementById(skullIdToHide);
-  //   if (skullToHide) {
-  //     skullToHide.style.visibility = 'hidden';
-  //   }
-  // }
 }
 
