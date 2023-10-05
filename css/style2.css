@@ -154,9 +154,8 @@ section {
 }
 
 .fade-out {
-  animation: fade-out 1s;
+  animation: fade-out 2s;
 }
-
 
 #username {
   border: 2px solid #ccc;
