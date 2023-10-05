@@ -109,7 +109,8 @@ let scenario = {
     buttons: [
       ['Shed', function () {
         console.log('Your health is ' + health + ' out of 3');
-        advanceTo('seven');
+        // advanceTo('seven');
+        window.location.href = 'win.html';
       }],
       ['Basement', function () {
         alert('Don\'t go in the basement! You fell down the stairs. Health -1');
