@@ -28,20 +28,13 @@ function checkGameOver() {
     let restartButton = document.createElement('button');
     restartButton.textContent = 'Restart';
     restartButton.className = 'restart';
-    restartButton.addEventListener('click', function() {
+    restartButton.addEventListener('click', function () {
       health = 3;
       advanceTo('two');
       window.location.href = 'index.html';
     });
     buttonBox.appendChild(restartButton);
   }
-}
-
-
-
-function advanceTo(num) {
-  changeText(scenario[num].text);
-  changeButtons(scenario[num].buttons);
 }
 
 let scenario = {
@@ -129,36 +122,40 @@ let scenario = {
   }
 };
 
-let skullImg1 = document.getElementById('skull');
-let skullImg2 = document.getElementById('skull');
-let skullImg3 = document.getElementById('skull');
+let skullImg1 = document.getElementById('skull1');
+let skullImg2 = document.getElementById('skull2');
+let skullImg3 = document.getElementById('skull3');
 
 
 function updateHealth() {
   if (health === 2) {
-    skullImg3.classList.add('scale-down-center');
-    skullImg3 = document.getElementById('skull').src = '100Purple.png';
+    skullImg3.classList.add('fade-out');
+    skullImg3.addEventListener('animationend', function () {
+      skullImg3.classList.remove('fade-out');
+      document.getElementById('skull3').src = 'images/100Purple.png';
+    });
   } else if (health === 1) {
-    skullImg2.classList.add('scale-down-center');
-    skullImg2 = document.getElementById('skull').src = '100Purple.png';
+    skullImg2.classList.add('fade-out');
+    skullImg2.addEventListener('animationend', function () {
+      skullImg2.classList.remove('fade-out');
+      document.getElementById('skull2').src = 'images/100Purple.png';
+    });
+
   } else if (health === 0) {
-    skullImg1.classList.add('scale-down-center');
-    skullImg1 = document.getElementById('skull').src = '100Purple.png';
-    window.location.href = 'index.html';
+    skullImg1.classList.add('fade-out');
+    skullImg1.addEventListener('animationend', function () {
+      skullImg1.classList.remove('fade-out');
+      window.location.href = 'index.html';
+      document.getElementById('skull1').src = 'images/100Purple.png';
+    });
   }
 }
+
 
 advanceTo('two');
 
 function advanceTo(num) {
   changeText(scenario[num].text);
   changeButtons(scenario[num].buttons);
-  if (health < 3) {
-    const skullIdToHide = 'skull' + (3 - health);
-    const skullToHide = document.getElementById(skullIdToHide);
-    if (skullToHide) {
-      skullToHide.style.visibility = 'hidden';
-    }
-  }
 }
 
