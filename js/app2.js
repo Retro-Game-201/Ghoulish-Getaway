@@ -39,10 +39,10 @@ function checkGameOver() {
 
 
 
-function advanceTo(num) {
-  changeText(scenario[num].text);
-  changeButtons(scenario[num].buttons);
-}
+// function advanceTo(num) {
+//   changeText(scenario[num].text);
+//   changeButtons(scenario[num].buttons);
+// }
 
 let scenario = {
   two: {
