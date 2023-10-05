@@ -1,8 +1,7 @@
-let userName = localStorage.getItem('userName');
+'use strict';
+
+let winMsg = document.getElementById('winMsg');
+let userName = localStorage.getItem('User Name: ');
 console.log('user name is: ', userName);
 
-let winMsg = document.getElementById.innerHTML = ('winMsg');
-console.log('winMsg is: ', winMsg);
-
-winMsg = `Congratulations, ${userName}, you won!`;
-console.log('reassigned winMgn is: ', winMsg);
+winMsg.textContent = `Congratulations, ${userName}, you won!`;
