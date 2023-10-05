@@ -7,6 +7,10 @@ let health = 3;
 let textElement = document.getElementById('text');
 let buttonBox = document.getElementById('buttonBox');
 
+let defaultSong = document.getElementById('audio');
+let scarySong = document.getElementById('scarySong');
+let funnySong = document.getElementById('funnySong');
+
 function changeText(newText) {
   textElement.textContent = newText;
 }
@@ -65,6 +69,7 @@ let scenario = {
         updateHealth();
       }],
       ['Ignore and go to next room', function () {
+        alert('Good idea. Best not to stare into its eyes too long.');
         console.log('Your health is ' + health + 'out of 3');
         advanceTo('four');
       }]
@@ -74,6 +79,8 @@ let scenario = {
     text: 'There is a record player. Do you play scary music or funny music?',
     buttons: [
       ['Scary', function () {
+        defaultSong.pause();
+        scarySong.play();
         alert('Why would you play scary music. Health -1');
         health--;
         console.log('Your health is ' + health + ' out of 3');
@@ -82,6 +89,9 @@ let scenario = {
         updateHealth();
       }],
       ['Funny', function () {
+        alert('Good choice. Nothing bad happens when the music is silly.');
+        defaultSong.pause();
+        funnySong.play();
         console.log('Your health is ' + health + ' out of 3');
         advanceTo('five');
       }]
