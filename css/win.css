@@ -1,0 +1,171 @@
+body {
+  background-color: #3d155c;
+  background-image: url('/images/SpookyBackground.png');
+  background-size: cover;
+  font-family: 'Press Start 2P';
+  font-size: 15px;
+  text-align: center;
+  line-height: 2;
+  color: #eabbff;
+  min-height: 100vh;
+  /* Set the minimum height of the body to the viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+footer {
+  font-size: 10px;
+  color: #eabbff;
+  margin-top: auto;
+}
+
+.introduction {
+  text-align: left;
+  font-size: 13px;
+  background-color: #4c3454;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 20px;
+  color: #eabbff;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.person {
+  display: flex;
+}
+
+
+
+.text {
+  padding: 5%;
+  size: 18px;
+  color: #4c3454;
+}
+
+.container2 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 20px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+
+.button {
+  font-family: 'Press Start 2P';
+  margin: 20px;
+  padding: 10px;
+
+  color: rgb(247, 243, 233);
+}
+
+#start {
+  font-family: 'Press Start 2P';
+  margin: 10px;
+  padding: 10px;
+  background-color: #3d155c;
+  color: rgb(247, 243, 233);
+}
+
+.button:hover {
+  background-color: rgb(247, 243, 233);
+  color: #3d155c;
+  transition: 0.3s;
+}
+
+section {
+  align-items: center;
+  justify-content: center;
+  background-color: #3d155c;
+}
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(190, 38, 228, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(190, 38, 228, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(190, 38, 228, 0.7);
+  }
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.animate.glow:hover {
+  animation: glow 0.5s infinite alternate;
+}
+
+#username {
+  border: 2px solid #ccc;
+  background-color: #3d155c;
+  color: white;
+}
+
+.custom-button {
+    background-color: #32124b;
+    color: #c9a2db;
+    padding: 10px 20px;
+    border: 2px solid #c9a2db;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a box shadow */
+  }
+  
+#winId {
+  margin: 0 auto;
+  padding: 0em;
+  margin: 0em;
+  border:rgba(240, 236, 240, 0.5) solid 3px;
+  border-radius: 15px;
+  display: inline-grid;
+  justify-items: center;
+}
+
+p {
+    padding: 2em 0em 2em 0em;
+}
+
+#winImg {
+    padding: 0em 2em 2em 2em;
+}
+
+#audio {
+    padding: 0em 0em 2em 0em;
+}
