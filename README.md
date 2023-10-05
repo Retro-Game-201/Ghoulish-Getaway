@@ -22,11 +22,6 @@ This site is an in-browser Halloween-themed adventure/survival game. In this gam
 * [About Us Lighthouse Score: 100](images/aboutUS.png)
 * [Gameplay Lighthouse Score: 100](images/gameplay.png)
 
-### Reflections and Comments
-
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
-
 ## User Stories
 
 ### Luke:
