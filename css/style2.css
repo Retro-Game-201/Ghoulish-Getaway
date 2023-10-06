@@ -176,3 +176,11 @@ section {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   /* Add a box shadow */
 }
+
+a {
+  color:#c9a2db;
+}
+
+a:hover {
+  font-size: 125%;
+}

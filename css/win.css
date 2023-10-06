@@ -169,3 +169,11 @@ p {
 #audio {
     padding: 0em 0em 2em 0em;
 }
+
+a {
+  color:#c9a2db;
+}
+
+a:hover {
+  font-size: 125%;
+}
