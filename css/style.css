@@ -117,7 +117,13 @@ img {
 section {
   align-items: center;
   justify-content: center;
-  background-color: #3d155c;
+  /* background-color: #3d155c; */
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    background-color: #3d155c;
 }
 
 
@@ -198,4 +204,10 @@ section {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a box shadow */
   }
   
+a {
+  color:#c9a2db;
+}
 
+a:hover {
+  font-size: 125%;
+}
