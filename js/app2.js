@@ -10,6 +10,7 @@ let buttonBox = document.getElementById('buttonBox');
 let defaultSong = document.getElementById('audio');
 let scarySong = document.getElementById('scarySong');
 let funnySong = document.getElementById('funnySong');
+let endingNoise = document.getElementById('endingNoise');
 
 function changeText(newText) {
   textElement.textContent = newText;
@@ -28,6 +29,11 @@ function changeButtons(buttonList) {
 
 function checkGameOver() {
   if (health <= 0) {
+    defaultSong.pause();
+    funnySong.pause();
+    scarySong.pause();
+    endingNoise.muted = false;
+    endingNoise.play();
     changeText('Game Over! You lost all your lives.');
     let restartButton = document.createElement('button');
     restartButton.textContent = 'Restart';
